@@ -1,0 +1,14 @@
+name: idempiere_rest
+description: A useful client to idempiere rest API
+version: 1.0.0
+repository: https://github.com/devcoffee/idempiere_rest
+
+environment:
+  sdk: ">=2.18.0 <3.0.0"
+
+dependencies: 
+  http: ^0.13.5
+
+dev_dependencies:
+  lints: ^2.0.0
+  test: ^1.21.0

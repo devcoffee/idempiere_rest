@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the IdempiereClient class from the idempiere_rest library, for the Dart programming language.">
+  <title>IdempiereClient class - idempiere_rest library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">idempiere_rest</a></li>
+    <li><a href="../idempiere_rest/idempiere_rest-library.html">idempiere_rest</a></li>
+    <li class="self-crumb">IdempiereClient class</li>
+  </ol>
+  <div class="self-name">IdempiereClient</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+<h1><span class="kind-class">IdempiereClient</span> class 
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>The main class to do all requests to idempiere-rest API
+developed following the singleton pattern, once logged in,
+can be called in every part of the applications.
+Once instanciated, <a href="../idempiere_rest/IdempiereClient/setBaseUrl.html">setBaseUrl</a> must be the first method called.
+After that, <a href="../idempiere_rest/IdempiereClient/login.html">login</a> or <a href="../idempiere_rest/IdempiereClient/oneStepLogin.html">oneStepLogin</a> can be called, to retrieve the token.
+This class holds all <code>Session</code> information.</p>
+</section>
+
+
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="IdempiereClient" class="callable">
+          <span class="name"><a href="../idempiere_rest/IdempiereClient/IdempiereClient.html">IdempiereClient</a></span><span class="signature">()</span>
+        </dt>
+        <dd>
+          
+            <div class="constructor-modifier features">factory</div>
+        </dd>
+    </dl>
+  </section>
+
+    <section class="summary offset-anchor inherited" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Type-class.html">Type</a></span> 
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+      </dl>
+    </section>
+
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="delete" class="callable">
+  <span class="name"><a href="../idempiere_rest/IdempiereClient/delete.html">delete</a></span><span class="signature">(<wbr><span class="parameter" id="delete-param-endpoint"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">endpoint</span>, </span><span class="parameter" id="delete-param-id"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">id</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Abstracts the Remove a PO request in idempiere-rest API
+See (<a href="https://wiki.idempiere.org/en/REST_Web_Services#Remove_a_PO">https://wiki.idempiere.org/en/REST_Web_Services#Remove_a_PO</a>)
+return true if po is deleted or throw <a href="../idempiere_rest/APIException-class.html">APIException</a>
+  
+
+</dd>
+
+        <dt id="get" class="callable">
+  <span class="name"><a href="../idempiere_rest/IdempiereClient/get.html">get</a></span><span class="signature">&lt;<wbr><span class="type-parameter">T extends <a href="../idempiere_rest/ModelBase-class.html">ModelBase</a></span>&gt;</span><span class="signature">(<wbr><span class="parameter" id="get-param-endpoint"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">endpoint</span>, </span><span class="parameter" id="get-param-constructor"><span class="type-annotation">T</span> <span class="parameter-name">constructor</span>(<span class="parameter" id="param-"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span></span></span>), </span><span class="parameter" id="get-param-filter">{<span class="type-annotation"><a href="../idempiere_rest/FilterBuilder-class.html">FilterBuilder</a>?</span> <span class="parameter-name">filter</span>, </span><span class="parameter" id="get-param-expand"><span class="type-annotation"><a href="../idempiere_rest/ExpandBuilder-class.html">ExpandBuilder</a>?</span> <span class="parameter-name">expand</span>, </span><span class="parameter" id="get-param-orderBy"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">orderBy</span>, </span><span class="parameter" id="get-param-select"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">select</span>, </span><span class="parameter" id="get-param-top"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">top</span>, </span><span class="parameter" id="get-param-skip"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">skip</span>, </span><span class="parameter" id="get-param-valRule"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Object-class.html">Object</a>?</span> <span class="parameter-name">valRule</span>, </span><span class="parameter" id="get-param-context"><span class="type-annotation"><a href="../idempiere_rest/ContextBuilder-class.html">ContextBuilder</a>?</span> <span class="parameter-name">context</span>, </span><span class="parameter" id="get-param-showsql"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">showsql</span> = <span class="default-value">false</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Abstracts the Requesting PO Colletions request in idempiere-rest API
+See (<a href="https://wiki.idempiere.org/en/REST_Web_Services#Requesting_PO_Collections">https://wiki.idempiere.org/en/REST_Web_Services#Requesting_PO_Collections</a>)
+<code>constructor</code> is a function that receives a json and return a object of
+the requested type <code>T</code> that extends <a href="../idempiere_rest/ModelBase-class.html">ModelBase</a>
+return List of <code>T</code> that extends <a href="../idempiere_rest/ModelBase-class.html">ModelBase</a>
+  
+
+</dd>
+
+        <dt id="getOrganizations" class="callable">
+  <span class="name"><a href="../idempiere_rest/IdempiereClient/getOrganizations.html">getOrganizations</a></span><span class="signature">(<wbr><span class="parameter" id="getOrganizations-param-clientId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">clientId</span>, </span><span class="parameter" id="getOrganizations-param-roleId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">roleId</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../idempiere_rest/Organization-class.html">Organization</a></span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Abstracts the GET /auth/organizations request in idempiere-rest API
+See (<a href="https://wiki.idempiere.org/en/REST_Web_Services#Normal_log-in">https://wiki.idempiere.org/en/REST_Web_Services#Normal_log-in</a>)
+Must be call only after the <a href="../idempiere_rest/IdempiereClient/getRoles.html">getRoles</a> method call, in order to obtain <code>roleId</code>
+return List of <a href="../idempiere_rest/Organization-class.html">Organization</a>
+  
+
+</dd>
+
+        <dt id="getRecord" class="callable">
+  <span class="name"><a href="../idempiere_rest/IdempiereClient/getRecord.html">getRecord</a></span><span class="signature">&lt;<wbr><span class="type-parameter">T extends <a href="../idempiere_rest/ModelBase-class.html">ModelBase</a></span>&gt;</span><span class="signature">(<wbr><span class="parameter" id="getRecord-param-endpoint"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">endpoint</span>, </span><span class="parameter" id="getRecord-param-id"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">id</span>, </span><span class="parameter" id="getRecord-param-constructor"><span class="type-annotation">T</span> <span class="parameter-name">constructor</span>(<span class="parameter" id="param-"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span></span></span>), </span><span class="parameter" id="getRecord-param-expand">{<span class="type-annotation"><a href="../idempiere_rest/ExpandBuilder-class.html">ExpandBuilder</a>?</span> <span class="parameter-name">expand</span>, </span><span class="parameter" id="getRecord-param-select"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">select</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">T?</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Abstracts the Requesting an Individual PO by ID request in idempiere-rest API
+See (<a href="https://wiki.idempiere.org/en/REST_Web_Services#Requesting_an_Individual_PO_by_ID">https://wiki.idempiere.org/en/REST_Web_Services#Requesting_an_Individual_PO_by_ID</a>)
+<code>constructor</code> is a function that receives a json and return a object of
+the requested type <code>T</code> that extends <a href="../idempiere_rest/ModelBase-class.html">ModelBase</a>
+return <code>T</code> tjat extends <a href="../idempiere_rest/ModelBase-class.html">ModelBase</a>
+  
+
+</dd>
+
+        <dt id="getRoles" class="callable">
+  <span class="name"><a href="../idempiere_rest/IdempiereClient/getRoles.html">getRoles</a></span><span class="signature">(<wbr><span class="parameter" id="getRoles-param-clientId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">clientId</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../idempiere_rest/Role-class.html">Role</a></span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Abstracts the GET /auth/roles request in idempiere-rest API
+See (<a href="https://wiki.idempiere.org/en/REST_Web_Services#Normal_log-in">https://wiki.idempiere.org/en/REST_Web_Services#Normal_log-in</a>)
+Must be call only after the <a href="../idempiere_rest/IdempiereClient/login.html">login</a> method call, in order to obtain <code>clientId</code>
+return List of <a href="../idempiere_rest/Role-class.html">Role</a>
+  
+
+</dd>
+
+        <dt id="getWarehouses" class="callable">
+  <span class="name"><a href="../idempiere_rest/IdempiereClient/getWarehouses.html">getWarehouses</a></span><span class="signature">(<wbr><span class="parameter" id="getWarehouses-param-clientId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">clientId</span>, </span><span class="parameter" id="getWarehouses-param-roleId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">roleId</span>, </span><span class="parameter" id="getWarehouses-param-organizationId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">organizationId</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../idempiere_rest/Warehouse-class.html">Warehouse</a></span>&gt;</span></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Abstracts the GET /auth/warehouses request in idempiere-rest API
+See (<a href="https://wiki.idempiere.org/en/REST_Web_Services#Normal_log-in">https://wiki.idempiere.org/en/REST_Web_Services#Normal_log-in</a>)
+Must be call only after the <a href="../idempiere_rest/IdempiereClient/getOrganizations.html">getOrganizations</a> method call, in order to obtain <code>roleId</code>
+return List of <a href="../idempiere_rest/Warehouse-class.html">Warehouse</a>
+  
+
+</dd>
+
+        <dt id="initSession" class="callable">
+  <span class="name"><a href="../idempiere_rest/IdempiereClient/initSession.html">initSession</a></span><span class="signature">(<wbr><span class="parameter" id="initSession-param-endpoint"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">endpoint</span>, </span><span class="parameter" id="initSession-param-token"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">token</span>, </span><span class="parameter" id="initSession-param-clientId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">clientId</span>, </span><span class="parameter" id="initSession-param-roleId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">roleId</span>, </span><span class="parameter" id="initSession-param-organizationId">{<span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">organizationId</span>, </span><span class="parameter" id="initSession-param-warehouseId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">warehouseId</span>, </span><span class="parameter" id="initSession-param-language"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">language</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">Session</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Abstracts the PUT /auth/tokens request in idempiere-rest API
+See (<a href="https://wiki.idempiere.org/en/REST_Web_Services#Normal_log-in">https://wiki.idempiere.org/en/REST_Web_Services#Normal_log-in</a>)
+Must be call only after got <code>clientId</code> and <code>roleId</code>
+return <code>Session</code>
+  
+
+</dd>
+
+        <dt id="login" class="callable">
+  <span class="name"><a href="../idempiere_rest/IdempiereClient/login.html">login</a></span><span class="signature">(<wbr><span class="parameter" id="login-param-endpoint"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">endpoint</span>, </span><span class="parameter" id="login-param-userName"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">userName</span>, </span><span class="parameter" id="login-param-password"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">password</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../idempiere_rest/LoginResponse-class.html">LoginResponse</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Abstracts the Normal log-in request in idempiere-rest API
+See (<a href="https://wiki.idempiere.org/en/REST_Web_Services#Normal_log-in">https://wiki.idempiere.org/en/REST_Web_Services#Normal_log-in</a>)
+<code>endpoint</code> normally /auth/tokens
+return <code>LoginResponse</code>
+  
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="oneStepLogin" class="callable">
+  <span class="name"><a href="../idempiere_rest/IdempiereClient/oneStepLogin.html">oneStepLogin</a></span><span class="signature">(<wbr><span class="parameter" id="oneStepLogin-param-endpoint"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">endpoint</span>, </span><span class="parameter" id="oneStepLogin-param-userName"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">userName</span>, </span><span class="parameter" id="oneStepLogin-param-password"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">password</span>, </span><span class="parameter" id="oneStepLogin-param-clientId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">clientId</span>, </span><span class="parameter" id="oneStepLogin-param-roleId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">roleId</span>, </span><span class="parameter" id="oneStepLogin-param-organizationId">{<span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">organizationId</span>, </span><span class="parameter" id="oneStepLogin-param-warehouseId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">warehouseId</span>, </span><span class="parameter" id="oneStepLogin-param-language"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">language</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">Session</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Abstracts the One-step log-in request in idempiere-rest API
+See <a href="https://wiki.idempiere.org/en/REST_Web_Services#One-step_log-in">https://wiki.idempiere.org/en/REST_Web_Services#One-step_log-in</a>
+<code>endpoint</code> normally /auth/tokens
+return <a href="../idempiere_rest/LoginResponse-class.html">LoginResponse</a>
+  
+
+</dd>
+
+        <dt id="post" class="callable">
+  <span class="name"><a href="../idempiere_rest/IdempiereClient/post.html">post</a></span><span class="signature">&lt;<wbr><span class="type-parameter">T extends <a href="../idempiere_rest/ModelBase-class.html">ModelBase</a></span>&gt;</span><span class="signature">(<wbr><span class="parameter" id="post-param-endpoint"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">endpoint</span>, </span><span class="parameter" id="post-param-model"><span class="type-annotation">T</span> <span class="parameter-name">model</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Abstracts the Create a PO request in idempiere-rest API
+See (<a href="https://wiki.idempiere.org/en/REST_Web_Services#Create_a_PO">https://wiki.idempiere.org/en/REST_Web_Services#Create_a_PO</a>)
+return created <code>T</code> that extends <a href="../idempiere_rest/ModelBase-class.html">ModelBase</a> using the <a href="../idempiere_rest/ModelBase/fromJson.html">ModelBase.fromJson</a> method
+of <code>model</code>
+  
+
+</dd>
+
+        <dt id="put" class="callable">
+  <span class="name"><a href="../idempiere_rest/IdempiereClient/put.html">put</a></span><span class="signature">&lt;<wbr><span class="type-parameter">T extends <a href="../idempiere_rest/ModelBase-class.html">ModelBase</a></span>&gt;</span><span class="signature">(<wbr><span class="parameter" id="put-param-endpoint"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">endpoint</span>, </span><span class="parameter" id="put-param-model"><span class="type-annotation">T</span> <span class="parameter-name">model</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Abstracts the Update a PO request in idempiere-rest API
+See (<a href="https://wiki.idempiere.org/en/REST_Web_Services#Update_a_PO">https://wiki.idempiere.org/en/REST_Web_Services#Update_a_PO</a>)
+return updated <code>T</code> that extends <a href="../idempiere_rest/ModelBase-class.html">ModelBase</a> using the <a href="../idempiere_rest/ModelBase/fromJson.html">ModelBase.fromJson</a> method
+of <code>model</code>
+  
+
+</dd>
+
+        <dt id="runProcess" class="callable">
+  <span class="name"><a href="../idempiere_rest/IdempiereClient/runProcess.html">runProcess</a></span><span class="signature">(<wbr><span class="parameter" id="runProcess-param-endpoint"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">endpoint</span>, </span><span class="parameter" id="runProcess-param-params">{<span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span>?</span> <span class="parameter-name">params</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../idempiere_rest/ProcessSummary-class.html">ProcessSummary</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Run a Process and retrieve the <code>ProcessSummary</code>
+See (<a href="https://wiki.idempiere.org/en/REST_Web_Services#Processses_api.2Fv1.2Fprocesses">https://wiki.idempiere.org/en/REST_Web_Services#Processses_api.2Fv1.2Fprocesses</a>)
+<code>params</code> is columnName:value to be passed to the process
+  
+
+</dd>
+
+        <dt id="setBaseUrl" class="callable">
+  <span class="name"><a href="../idempiere_rest/IdempiereClient/setBaseUrl.html">setBaseUrl</a></span><span class="signature">(<wbr><span class="parameter" id="setBaseUrl-param-baseURL"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">baseURL</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="../index.html">idempiere_rest</a></li>
+  <li><a href="../idempiere_rest/idempiere_rest-library.html">idempiere_rest</a></li>
+  <li class="self-crumb">IdempiereClient class</li>
+</ol>
+
+
+    <h5>idempiere_rest library</h5>
+    <ol>
+      <li class="section-title"><a href="../idempiere_rest/idempiere_rest-library.html#classes">Classes</a></li>
+        <li><a href="../idempiere_rest/Client-class.html">Client</a></li>
+        <li><a href="../idempiere_rest/ContextBuilder-class.html">ContextBuilder</a></li>
+        <li><a href="../idempiere_rest/ExpandBuilder-class.html">ExpandBuilder</a></li>
+        <li><a href="../idempiere_rest/FilterBuilder-class.html">FilterBuilder</a></li>
+        <li><a href="../idempiere_rest/IdempiereClient-class.html">IdempiereClient</a></li>
+        <li><a href="../idempiere_rest/LoginResponse-class.html">LoginResponse</a></li>
+        <li><a href="../idempiere_rest/ModelBase-class.html">ModelBase</a></li>
+        <li><a href="../idempiere_rest/Organization-class.html">Organization</a></li>
+        <li><a href="../idempiere_rest/ProcessSummary-class.html">ProcessSummary</a></li>
+        <li><a href="../idempiere_rest/Role-class.html">Role</a></li>
+        <li><a href="../idempiere_rest/Warehouse-class.html">Warehouse</a></li>
+
+
+
+
+
+
+      <li class="section-title"><a href="../idempiere_rest/idempiere_rest-library.html#enums">Enums</a></li>
+        <li><a href="../idempiere_rest/Operators.html">Operators</a></li>
+
+
+      <li class="section-title"><a href="../idempiere_rest/idempiere_rest-library.html#exceptions">Exceptions</a></li>
+        <li><a href="../idempiere_rest/APIException-class.html">APIException</a></li>
+</ol>
+
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+    <ol>
+
+        <li class="section-title"><a href="../idempiere_rest/IdempiereClient-class.html#constructors">Constructors</a></li>
+          <li><a href="../idempiere_rest/IdempiereClient/IdempiereClient.html">IdempiereClient</a></li>
+
+
+        <li class="section-title inherited">
+          <a href="../idempiere_rest/IdempiereClient-class.html#instance-properties">Properties</a>
+        </li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/hashCode.html">hashCode</a></li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/runtimeType.html">runtimeType</a></li>
+
+        <li class="section-title"><a href="../idempiere_rest/IdempiereClient-class.html#instance-methods">Methods</a></li>
+          <li><a href="../idempiere_rest/IdempiereClient/delete.html">delete</a></li>
+          <li><a href="../idempiere_rest/IdempiereClient/get.html">get</a></li>
+          <li><a href="../idempiere_rest/IdempiereClient/getOrganizations.html">getOrganizations</a></li>
+          <li><a href="../idempiere_rest/IdempiereClient/getRecord.html">getRecord</a></li>
+          <li><a href="../idempiere_rest/IdempiereClient/getRoles.html">getRoles</a></li>
+          <li><a href="../idempiere_rest/IdempiereClient/getWarehouses.html">getWarehouses</a></li>
+          <li><a href="../idempiere_rest/IdempiereClient/initSession.html">initSession</a></li>
+          <li><a href="../idempiere_rest/IdempiereClient/login.html">login</a></li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+          <li><a href="../idempiere_rest/IdempiereClient/oneStepLogin.html">oneStepLogin</a></li>
+          <li><a href="../idempiere_rest/IdempiereClient/post.html">post</a></li>
+          <li><a href="../idempiere_rest/IdempiereClient/put.html">put</a></li>
+          <li><a href="../idempiere_rest/IdempiereClient/runProcess.html">runProcess</a></li>
+          <li><a href="../idempiere_rest/IdempiereClient/setBaseUrl.html">setBaseUrl</a></li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/toString.html">toString</a></li>
+
+        <li class="section-title inherited"><a href="../idempiere_rest/IdempiereClient-class.html#operators">Operators</a></li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/operator_equals.html">operator ==</a></li>
+
+
+
+
+</ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    idempiere_rest
+      1.0.0
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+
