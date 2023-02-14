@@ -6,8 +6,11 @@ import 'package:idempiere_rest/src/model_base.dart';
 
 /// Class that abstracts the response of [IdempiereClient.getRoles]
 class Role extends ModelBase {
+  late String name;
+
   Role(Map<String, dynamic> json) : super(json) {
     id = json['id'];
+    name = json['name'];
   }
 
   @override

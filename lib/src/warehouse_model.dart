@@ -6,8 +6,10 @@ import 'package:idempiere_rest/src/model_base.dart';
 
 /// Class that abstracts the response of [IdempiereClient.getWarehouses]
 class Warehouse extends ModelBase {
+  late String name;
   Warehouse(Map<String, dynamic> json) : super(json) {
     id = json['id'];
+    name = json['name'];
   }
 
   @override
