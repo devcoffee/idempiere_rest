@@ -159,6 +159,7 @@ class IdempiereClient {
         hasQueryOptions = true;
         newUrl.write("?");
       }
+    }
 
       newUrl.write("showsql");
 
