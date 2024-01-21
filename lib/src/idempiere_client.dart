@@ -161,9 +161,6 @@ class IdempiereClient {
       }
 
       newUrl.write("showsql");
-    }
-
-    print(newUrl);
 
     return newUrl.toString();
   }
