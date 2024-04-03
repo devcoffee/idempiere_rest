@@ -26,6 +26,7 @@ class ProcessSummary {
     exportFileName = json['exportFileName'];
     exportFileLength = json['exportFileLength'];
     nodeId = json['nodeId'];
-    logs = List<String>.from(json['logs'].map((log) => log.toString()));
+    if (json['logs'] != null)
+      logs = List<String>.from(json['logs'].map((log) => log.toString()));
   }
 }
