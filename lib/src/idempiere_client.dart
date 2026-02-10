@@ -41,7 +41,7 @@ class IdempiereClient {
   }
 
   _getRecordType(String endpoint) {
-    if (endpoint.startsWith("/models/")) {
+    if (endpoint.startsWith("/models/") || endpoint.startsWith("/views/")) {
       return "records";
     } else if (endpoint.startsWith("/windows/")) {
       return "window-records";
