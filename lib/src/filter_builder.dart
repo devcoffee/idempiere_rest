@@ -86,16 +86,15 @@ class _Filter {
         s.write(")");
         break;
       case Operators.in_:
-        String fValue = value.toString().trim();
-        if (fValue.startsWith("[") && fValue.endsWith("]")) {
-          fValue = fValue.substring(1, fValue.length - 1);
-          fValue = "($fValue)";
-        }
+        if (value is! List || value.isEmpty)
+          throw ArgumentError('IN operator requires a non-empty List');
+        final values = value.map(_getStringRepresentation).join(', ');
+
         s.write(columnName);
         s.write(" ");
         s.write("in");
         s.write(" ");
-        s.write(fValue);
+        s.write("($values)");
         s.write(" ");
         break;
       default:
